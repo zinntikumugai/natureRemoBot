@@ -1,0 +1,17 @@
+{
+  "name": "NatureRemoBot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "zinntikumugai <uesitananame55@gmail.com>",
+  "license": "MPL-2.0",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "request": "^2.88.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  }
+}
