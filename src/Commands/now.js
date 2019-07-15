@@ -30,14 +30,35 @@ module.exports = class extends Command {
         }
         let devices = await utils.getO(ops)
         for (const i in devices) {
-            console.log(devices[i].name)
             console.log(devices[i])
-            console.log("users")
-            for (const k in devices[i].users)
-                console.log(devices[i].users[k])
             console.log("newet_event")
-            console.log(devices[i].newest_events)
-
+            console.log()
+            embed.fields.push({
+                name: "name",
+                value: devices[i].name
+            })
+            Object.keys(devices[i].newest_events).forEach(key => {
+                let name
+                let val = devices[i].newest_events[key].val
+                switch (key) {
+                    case "te":
+                        name = "温度"
+                        val += " 度"
+                        break
+                    case "hu":
+                        name = "湿度"
+                        val += " %"
+                        break
+                    case "il":
+                        name = "照度"
+                        break
+                    default:
+                }
+                embed.fields.push({
+                    name: name,
+                    value: val
+                })
+            })
         }
 
         message.channel.send(message.author, { embed: embed })
