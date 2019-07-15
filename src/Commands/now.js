@@ -17,22 +17,12 @@ module.exports = class extends Command {
 
     async call(client, message, args) {
         args.shift()
+        let natureRemo = process.Updater
         let embed = this.embed(client)
         let config = process.CoreConfig
 
-        let ops = {
-            uri: "https://api.nature.global/1/devices",
-            method: "GET",
-            headers: {
-                "Content-type": "application/json",
-                "Authorization": "Bearer " + config.natureremo
-            }
-        }
-        let devices = await utils.getO(ops)
+        let devices = await natureRemo.getDevices()
         for (const i in devices) {
-            console.log(devices[i])
-            console.log("newet_event")
-            console.log()
             embed.fields.push({
                 name: "name",
                 value: devices[i].name
