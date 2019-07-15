@@ -1,0 +1,9 @@
+{
+    "discord": {
+        "token":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "prefix":","
+    },
+    "natureremo": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "natureremoTempDeviceId": "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX",
+    "natureremoTempInterval": 60000
+}
